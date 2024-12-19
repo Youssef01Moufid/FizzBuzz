@@ -26,4 +26,14 @@ public class FizzBuzzTest {
         //THEN
         assertThat(result).isEqualTo("2");
     }
+
+    @Test
+    public void testFizzBuzz3() {
+        //GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        //WHEN
+        String result = fizzbuzz.FizzBuzzde(3) ;
+        //THEN
+        assertThat(result).isEqualTo("Fizz");
+    }
 }

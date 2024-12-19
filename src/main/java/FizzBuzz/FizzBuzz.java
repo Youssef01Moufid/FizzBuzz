@@ -5,6 +5,10 @@ public class FizzBuzz {
 
         if(i == 2)
             return "2";
+
+        if(i % 3 == 0){
+            return "Fizz";
+        }
         return "1" ;
     }
 }

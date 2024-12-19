@@ -7,30 +7,34 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class FizzBuzzTest {
+    private FizzBuzz fizzbuzz;
+    @BeforeEach
+    public void setUp() {
+        fizzbuzz = new FizzBuzz();
+    }
+    @AfterEach
+    public void tearDown() {
+        fizzbuzz = null;
+    }
     @Test
     public void testFizzBuzz1() {
         //GIVEN
-        FizzBuzz fizzbuzz = new FizzBuzz();
         //WHEN
         String result = fizzbuzz.FizzBuzzde(1) ;
         //THEN
         assertThat(result).isEqualTo("1");
     }
-
     @Test
     public void testFizzBuzz2() {
         //GIVEN
-        FizzBuzz fizzbuzz = new FizzBuzz();
         //WHEN
         String result = fizzbuzz.FizzBuzzde(2) ;
         //THEN
         assertThat(result).isEqualTo("2");
     }
-
     @Test
     public void testFizzBuzz3() {
         //GIVEN
-        FizzBuzz fizzbuzz = new FizzBuzz();
         //WHEN
         String result = fizzbuzz.FizzBuzzde(3) ;
         //THEN

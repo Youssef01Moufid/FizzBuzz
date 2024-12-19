@@ -1,7 +1,7 @@
 package FizzBuzz;
 
 public class FizzBuzz {
-    public String FizzBuzzde(int i) {
+    public static String FizzBuzzde(int i) {
 
         if(i % 3 == 0 && i % 5 == 0) {
             return "FizzBuzz";

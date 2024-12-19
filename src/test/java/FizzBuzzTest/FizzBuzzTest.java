@@ -5,6 +5,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class FizzBuzzTest {
     private FizzBuzz fizzbuzz;
@@ -77,6 +80,37 @@ public class FizzBuzzTest {
         assertThat(result).isEqualTo("FizzBuzz");
     }
 
+    @ParameterizedTest
+    @CsvSource({
+            "1, '1'",
+            "2, '2'",
+            "3, 'Fizz'",
+            "4, '4'",
+            "5, 'Buzz'",
+            "6, 'Fizz'",
+            "7, '7'",
+            "8, '8'",
+            "9, 'Fizz'",
+            "10, 'Buzz'",
+            "11, '11'",
+            "12, 'Fizz'",
+            "13, '13'",
+            "14, '14'",
+            "15, 'FizzBuzz'",
+            "16, '16'",
+            "17, '17'",
+            "18, 'Fizz'",
+            "19, '19'",
+            "20, 'Buzz'"
+    })
+
+    void testFizzBuzz(int input, String expected) {
+        // Appel de la fonction
+        String result = FizzBuzz.FizzBuzzde(input);
+
+        // Vérification avec AssertJ
+        assertThat(result).isEqualTo(expected);
+    }
 
 
 

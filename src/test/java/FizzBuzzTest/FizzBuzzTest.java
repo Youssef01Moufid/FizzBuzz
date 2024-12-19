@@ -50,5 +50,26 @@ public class FizzBuzzTest {
         assertThat(result).isEqualTo("4");
     }
 
+    @Test
+    public void testFizzBuzz5() {
+        //GIVEN
+        //WHEN
+        String result = fizzbuzz.FizzBuzzde(5) ;
+        //THEN
+        assertThat(result).isEqualTo("Buzz");
+    }
+
+    @Test
+    public void testFizzBuzz6() {
+        //GIVEN
+        //WHEN
+        String result = fizzbuzz.FizzBuzzde(6) ;
+        //THEN
+        assertThat(result).isEqualTo("Fizz");
+    }
+
+
+
+
 
 }
